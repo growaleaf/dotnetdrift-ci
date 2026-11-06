@@ -1,0 +1,16 @@
+name: ci
+on: [push]
+jobs:
+  test:
+    strategy:
+      matrix:
+        dotnet-version:
+          - '6.0.x'
+          - '8.0.x'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - run: dotnet test

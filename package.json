@@ -1,0 +1,38 @@
+{
+  "name": "dotnetdrift-ci",
+  "version": "1.0.0",
+  "description": "Fail CI when your .NET SDK version claims disagree: global.json's sdk.version, every *.csproj's TargetFramework(s), every Dockerfile's FROM mcr.microsoft.com/dotnet/sdk:X.Y, and every GitHub Actions workflow's dotnet-version all checked against each other.",
+  "license": "SEE LICENSE IN LICENSE",
+  "bin": {
+    "dotnetdrift-ci": "./cli.js"
+  },
+  "main": "cli.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/growaleaf/dotnetdrift-ci.git"
+  },
+  "keywords": [
+    "dotnet",
+    ".net",
+    "version",
+    "global.json",
+    "csproj",
+    "target-framework",
+    "docker",
+    "github-actions",
+    "ci",
+    "continuous-integration",
+    "drift"
+  ],
+  "files": [
+    "cli.js",
+    "README.md",
+    "LICENSE"
+  ]
+}

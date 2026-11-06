@@ -1,0 +1,16 @@
+{
+  // License server for standalone "dotnetdrift-ci" (Orchard CAT-D-135's CLI).
+  // Deploy: cd worker && npx wrangler deploy
+  //   then: npx wrangler secret put STRIPE_SECRET_KEY    (Made for This Day Stripe account)
+  //         npx wrangler secret put LICENSE_PRIVATE_KEY  (from ~/.hive_devtools_license_keys/dotnetdrift.dev.vars)
+  "name": "dotnetdrift-ci-license",
+  "main": "src/index.js",
+  "compatibility_date": "2026-05-25",
+  "routes": [
+    { "pattern": "dotnetdrift-ci.madeforthisday.com", "custom_domain": true }
+  ],
+  "vars": {
+    // Stripe payment link for the $9 one-time Pro unlock
+    "PAYMENT_LINK_URL": "https://buy.stripe.com/8x23cv7wXeMOa0m5Hh2gp2h"
+  }
+}
